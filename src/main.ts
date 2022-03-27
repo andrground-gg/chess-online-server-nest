@@ -7,20 +7,6 @@ const MongoStore = require('connect-mongo');
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
-  /*******DEL*******/
-  // var whitelist = ['http://localhost:8080'];
-  // app.enableCors({
-  //   credentials: true,
-  //   origin: function (origin, callback) {
-  //     if (!origin || whitelist.indexOf(origin) !== -1) {
-  //       callback(null, true)
-  //     } else {
-  //       callback(new Error('Not allowed by CORS'))
-  //     }
-  //   },
-  // });
-  /**************/
 
   app.use(
     session({
